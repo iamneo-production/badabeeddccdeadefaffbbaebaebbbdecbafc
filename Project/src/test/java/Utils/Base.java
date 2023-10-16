@@ -102,3 +102,9 @@ public class Base
 
 
 
+// rror
+// : 
+// SyntaxError: Unexpected token 'h', "https://id"... is not valid JSON at JSON.parse (<anonymous>) at XMLHttpRequest.onLoad (http://kscollege408.examly.test:4200/vendor.js:75688:39) at _ZoneDelegate.invokeTask (http://kscollege408.examly.test:4200/polyfills.js:3521:31) at Object.onInvokeTask (http://kscollege408.examly.test:4200/vendor.js:125004:33) at _ZoneDelegate.invokeTask (http://kscollege408.examly.test:4200/polyfills.js:3520:60) at Zone.runTask (http://kscollege408.examly.test:4200/polyfills.js:3293:47) at ZoneTask.invokeTask [as invoke] (http://kscollege408.examly.test:4200/polyfills.js:3602:34) at invokeTask (http://kscollege408.examly.test:4200/polyfills.js:4776:18) at globalCallback (http://kscollege408.examly.test:4200/polyfills.js:4819:33) at XMLHttpRequest.globalZoneAwareCallback (http://kscollege408.examly.test:4200/polyfills.js:4840:16)
+// text
+// : 
+// "https://ide-badabeed
