@@ -1,0 +1,10 @@
+-------------------------------------------------------------------------------
+Test set: Runner.RunTest
+-------------------------------------------------------------------------------
+Tests run: 18, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 42.956 s <<< FAILURE! - in Runner.RunTest
+Then I verify the total number of results found based on the selected price range(Scenario: Filter products by price range)  Time elapsed: 0.009 s  <<< FAILURE!
+java.lang.AssertionError: C2 text does not contain C1 text. C1 text: '34', C2 text: '159Productsfound'
+
+Scenario: Filter products by price range  Time elapsed: 0.013 s  <<< FAILURE!
+java.lang.AssertionError: C2 text does not contain C1 text. C1 text: '34', C2 text: '159Productsfound'
+
