@@ -8,7 +8,6 @@ StepDefinition/Homepage.class
 Runner/RunTest.class
 Pages/Url.class
 Pages/Testcase2.class
-Features/Search.feature
 Utils/EventHandler.class
 StepDefinition/Offers.class
 StepDefinition/Shopping.class
@@ -17,5 +16,4 @@ Pages/Testcase3.class
 UiStore/HomepageUI.class
 Utils/Base.class
 Utils/LoggerHandler.class
-.DS_Store
 Utils/Reporter.class
