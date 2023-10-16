@@ -1,6 +1,6 @@
 UiStore/ShoppingUI.class
-UiStore/OffersUI.class
 Utils/ReadPropertyFile.class
+UiStore/OffersUI.class
 Utils/Screenshot.class
 Utils/ExcelReader.class
 Utils/WebDriverHelper.class
@@ -13,7 +13,7 @@ StepDefinition/Offers.class
 StepDefinition/Shopping.class
 Pages/Testcase1.class
 Pages/Testcase3.class
-UiStore/HomepageUI.class
 Utils/Base.class
+UiStore/HomepageUI.class
 Utils/LoggerHandler.class
 Utils/Reporter.class
