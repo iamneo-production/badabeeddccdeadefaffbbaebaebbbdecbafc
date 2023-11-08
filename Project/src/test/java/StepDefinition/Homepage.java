@@ -11,6 +11,7 @@ import Pages.Testcase1;
 import Pages.Url;
 import Utils.Base;
 import Utils.Reporter;
+import cucumber.api.PendingException;
 import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.Given;
@@ -33,8 +34,8 @@ public class Homepage{
        extent = Reporter.generateExtentReport();
     }
     
-    @Given("^I am on ELC Website$")
-    public void i_am_on_ELC_Website() throws Throwable {
+    @Given("^I am on YesStyle Website$")
+    public void i_am_on_YesStyle_Website() throws Throwable{
         driver = base.openBrowser();
         driver.manage().window().maximize();
         url = new Url(driver);
@@ -43,19 +44,30 @@ public class Homepage{
         url.LaunchSite(driver);
     }
 
-    @When("^I input the text \"([^\"]*)\" into the search box$")
-    public void i_input_the_text_into_the_search_box(String arg1) throws Throwable {
-        testcase1.ClickSearch("Peppa pig");
+    @When("^I click on the search icon in the top navigation bar$")
+    public void i_click_on_the_search_icon_in_the_top_navigation_bar() throws Throwable {
+        
     }
 
-    @When("^I click on the first option from the auto-populated list$")
-    public void i_click_on_the_first_option_from_the_auto_populated_list() throws Throwable {
-        testcase1.SelectFromList();
+    @When("^I input \"([^\"]*)\" in the search bar$")
+    public void i_input_in_the_search_bar(String arg1) throws Throwable {
+       
     }
 
-    @Then("^I confirm that the search results page contains the label \"([^\"]*)\"$")
-    public void i_confirm_that_the_search_results_page_contains_the_label(String arg1) throws Throwable {
-        testcase1.ClickSearch("Peppa pig");
+    @When("^I click on the first result that lists \"([^\"]*)\" in the displayed suggestion list$")
+    public void i_click_on_the_first_result_that_lists_in_the_displayed_suggestion_list(String arg1) throws Throwable {
+       
+    }
+
+    @When("^I check the \"([^\"]*)\" checkbox under the \"([^\"]*)\" section on the left side$")
+    public void i_check_the_checkbox_under_the_section_on_the_left_side(String arg1, String arg2) throws Throwable {
+        
+    }
+
+    @Then("^I should see the filter \"([^\"]*)\" applied in the \"([^\"]*)\" section on the top left side$")
+    public void i_should_see_the_filter_applied_in_the_section_on_the_top_left_side(String arg1, String arg2) throws Throwable {
+        
+    
     }
 
     @After

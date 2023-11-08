@@ -40,11 +40,8 @@ public class Url {
     public void LaunchSite(WebDriver driver) {
         try {
             System.out.println("*************************");
-            driver.get("https://www.elc.co.uk");
+            driver.get("https://www.yesstyle.com/en/home.html");
             options.addArguments("--remote-allow-origins=*");
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement acceptCookiesButton = wait.until(ExpectedConditions.elementToBeClickable(HomepageUI.AllowButton));
-            driverHelper.clickElement(driver, acceptCookiesButton);
             Screenshot.getScreenShot(driver, "Site launched sucessfully");
         } catch (Exception ex) {
             ex.printStackTrace();
