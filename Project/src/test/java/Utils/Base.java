@@ -57,7 +57,7 @@ public class Base
 		DesiredCapabilities dc=new DesiredCapabilities();
 			System.out.println("chrome opening");
 			dc.setBrowserName("chrome");
-			driver = new RemoteWebDriver(new URL("http://34.85.201.58:4499"), dc);
+			driver = new RemoteWebDriver(new URL("http://localhost:4444"), dc);
 			System.out.println("Opened");
 		}
 		else if(browsername.equalsIgnoreCase("firefox")){

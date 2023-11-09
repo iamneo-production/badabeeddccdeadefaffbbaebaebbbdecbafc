@@ -37,10 +37,10 @@ public class Testcase1 {
     
     ExtentTest test = Reporter.generateExtentReport().createTest("Homepage", "Execution for HomePage Function");
    
-    public void ClickSearch(String search_text) throws Throwable {
+    public void ClickSearch(String arg1) throws Throwable {
         try {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driverHelper.fillForm(homepageUI.searchBar(), search_text);
+            driverHelper.fillForm(homepageUI.searchBar(), arg1);
             test.log(Status.PASS, "Send key sucessfully");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -65,16 +65,16 @@ public class Testcase1 {
     }
     
   
-    public void CompareValue(String Expected_Label) throws Throwable {
+    public void CompareValue(String arg1) throws Throwable {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
             WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='dep_datepicker']")));
             String labelText = element.getText();
             logger.info(labelText);
-            if (labelText.toLowerCase().contains(Expected_Label.toLowerCase())) {
+            if (labelText.toLowerCase().contains(arg1.toLowerCase())) {
                 return;
             } else {
-                Assert.assertTrue("Expected label text to contain '" + Expected_Label + "', but it was '" + labelText + "'", labelText.contains(Expected_Label));
+                Assert.assertTrue("Expected label text to contain '" + arg1 + "', but it was '" + labelText + "'", labelText.contains(arg1));
             }
             
             Screenshot.getScreenShot(driver, "Assert the value sucessfully");

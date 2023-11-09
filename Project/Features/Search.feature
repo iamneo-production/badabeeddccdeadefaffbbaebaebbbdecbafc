@@ -4,9 +4,7 @@ Feature: YesStyle Website Testing
   Scenario: Search for Face Creams with Japanese Brands
     
     Given I am on YesStyle Website 
-      When I click on the search icon in the top navigation bar
-      And I input "Face creams " in the search bar
-      And I click on the first result that lists "Face creams" in the displayed suggestion list
+      When I click on the search icon in the top navigation bar and search for "Face Creams"
       And I check the "Japanese Brands" checkbox under the "Featured" section on the left side
       Then I should see the filter "Japanese Brands" applied in the "Refined By" section on the top left side
 

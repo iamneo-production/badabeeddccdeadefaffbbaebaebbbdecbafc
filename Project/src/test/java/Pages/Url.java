@@ -40,7 +40,7 @@ public class Url {
     public void LaunchSite(WebDriver driver) {
         try {
             System.out.println("*************************");
-            driver.get("https://www.yesstyle.com/en/home.html");
+            driver.get("https://www.yesstyle.com");
             options.addArguments("--remote-allow-origins=*");
             Screenshot.getScreenShot(driver, "Site launched sucessfully");
         } catch (Exception ex) {
