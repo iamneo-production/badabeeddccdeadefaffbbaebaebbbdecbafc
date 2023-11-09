@@ -26,6 +26,7 @@ public class Testcase1 {
     private WebDriver driver;
     ChromeOptions options = new ChromeOptions();
     private WebDriverHelper driverHelper;
+    HomepageUI homepageUI = new HomepageUI();
     Reporter reporter = new Reporter();
     private static final org.apache.log4j.Logger logger = org.apache.log4j.Logger.getLogger(Testcase1.class);
 
@@ -39,7 +40,7 @@ public class Testcase1 {
     public void ClickSearch(String search_text) throws Throwable {
         try {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-            driverHelper.fillForm(HomepageUI.SearchBar, search_text);
+            driverHelper.fillForm(homepageUI.searchBar(), search_text);
             test.log(Status.PASS, "Send key sucessfully");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -53,10 +54,7 @@ public class Testcase1 {
     public void SelectFromList() {
         try {
             driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
-            WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(30));
-            wait.until(ExpectedConditions.jsReturnsValue("return document.readyState === 'complete';"));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(HomepageUI.SelectList));
-            element.click();
+            driverHelper.clickElement(homepageUI.japanBrand());
             test.log(Status.PASS, "Selected from the list");
         } catch (Exception ex) {
             ex.printStackTrace();
@@ -70,7 +68,7 @@ public class Testcase1 {
     public void CompareValue(String Expected_Label) throws Throwable {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
-            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//h1[contains(text(),'Peppa Pig: Peppa\u2019s Adventures - Peppa\u2019s Family Mot')]")));
+            WebElement element = wait.until(ExpectedConditions.elementToBeClickable(By.xpath("//input[@id='dep_datepicker']")));
             String labelText = element.getText();
             logger.info(labelText);
             if (labelText.toLowerCase().contains(Expected_Label.toLowerCase())) {
